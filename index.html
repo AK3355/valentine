@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Be My Valentine?</title>
+<title>Valentine</title>
 <style>
 body{
   text-align:center;
   font-family:Arial;
-  background:#ffb6c1;
-  height:100vh;
-  overflow:hidden;
+  background:pink;
 }
-h1{margin-top:120px;font-size:50px}
+h1{
+  margin-top:120px;
+  font-size:50px;
+}
 button{
   font-size:25px;
   padding:15px 30px;
@@ -20,26 +20,36 @@ button{
   border-radius:30px;
   cursor:pointer;
 }
-#yes{background:white;color:#ff4d6d}
-#no{background:#ff4d6d;color:white;position:absolute}
+#yes{
+  background:white;
+  color:#ff4d6d;
+}
+#no{
+  background:#ff4d6d;
+  color:white;
+  position:absolute;
+}
 </style>
 </head>
+
 <body>
 
-<h1><span style="color:#ff4d6d;">Ingrid baby 💕</span><br>Will you be my Valentine? ❤️</h1>
+<h1>Ingrid baby ❤️<br>Will you be my Valentine?</h1>
 
 <button id="yes" onclick="yes()">Yes 💖</button>
 <button id="no" onmouseover="move()">No 😭</button>
 
 <script>
 function yes(){
-  document.body.innerHTML="<h1>I knew you'd say yes 😍❤️</h1>";
+  document.body.innerHTML="<h1>YAYYYY I LOVE YOU ❤️🥰</h1>";
 }
 
 function move(){
-  let btn=document.getElementById("no");
-  btn.style.top=Math.random()*80+"%";
-  btn.style.left=Math.random()*80+"%";
+  const btn=document.getElementById("no");
+  const x=Math.random()*(window.innerWidth-btn.offsetWidth);
+  const y=Math.random()*(window.innerHeight-btn.offsetHeight);
+  btn.style.left=x+"px";
+  btn.style.top=y+"px";
 }
 </script>
 
