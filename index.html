@@ -1,55 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Valentine</title>
+<meta charset="UTF-8">
+<title>Be My Valentine</title>
+
 <style>
 body{
-  text-align:center;
-  font-family:Arial;
-  background:pink;
+ text-align:center;
+ font-family:Arial;
+ background:#ffb6c1;
+ height:100vh;
+ overflow:hidden;
 }
 h1{
-  margin-top:120px;
-  font-size:50px;
+ margin-top:120px;
+ font-size:40px;
 }
 button{
-  font-size:25px;
-  padding:15px 30px;
-  margin:20px;
-  border:none;
-  border-radius:30px;
-  cursor:pointer;
+ font-size:25px;
+ padding:15px 30px;
+ margin:20px;
+ border:none;
+ border-radius:30px;
+ cursor:pointer;
 }
-#yes{
-  background:white;
-  color:#ff4d6d;
-}
-#no{
-  background:#ff4d6d;
-  color:white;
-  position:absolute;
-}
+#yes{background:white;color:#ff4d6d;}
+#no{background:#ff4d6d;color:white;position:absolute;}
 </style>
 </head>
 
 <body>
 
-<h1>Ingrid baby ❤️<br>Will you be my Valentine?</h1>
+<h1><span style="color:#ff4d6d;">Ingrid baby ❤️</span><br>Will you be my Valentine? 💌</h1>
 
-<button id="yes" onclick="yes()">Yes 💖</button>
-<button id="no" onmouseover="move()">No 😭</button>
+<button id="yes" onclick="yes()">Yes ❤️</button>
+<button id="no" onmouseover="move()">No 😜</button>
 
 <script>
 function yes(){
-  document.body.innerHTML="<h1>YAYYYY I LOVE YOU ❤️🥰</h1>";
+document.body.innerHTML = `<h1 style="padding:40px;font-size:28px;line-height:1.6">
+Ingrid my baby ❤️<br><br>
+
+You’re the best person I’ve ever met genuinely. I’m so lucky to be your boyfriend. I love you more than anyone or anything or even TV. You’re my princess, you’re my precious girl and I’ll love you forever. I’ll never ever leave you, I’ll always be by your side and love you and I promise to be the best boyfriend you could ever wish for and the boyfriend you deserve baby.<br><br>
+
+I love you now, I love you tomorrow, I love you forever. I pray we make it to 90 years together. This is just the beginning baby. I love you. I love your smell, I love your hair, I love your style, I love your energy, I love your eyes, I love your smile, I love your teeth, I love your laugh. I love you. I love everything about you. I love your interests. You’re so cute. My heart is filled with so much happiness whenever I see you and the moment you leave I feel like a piece of my heart is missing and I miss you all the time.<br><br>
+
+I promise to love you forever. I PROMISE to never leave you and treat you the way you deserve. Thank you for saying yes, for being my Valentine, and for being my future wife 💍❤️
+</h1>`;
 }
 
 function move(){
-  const btn=document.getElementById("no");
-  const x=Math.random()*(window.innerWidth-btn.offsetWidth);
-  const y=Math.random()*(window.innerHeight-btn.offsetHeight);
-  btn.style.left=x+"px";
-  btn.style.top=y+"px";
+let btn=document.getElementById("no");
+btn.style.top=Math.random()*80+"%";
+btn.style.left=Math.random()*80+"%";
 }
 </script>
 
